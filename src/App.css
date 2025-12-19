@@ -1,38 +1,121 @@
-.App {
-  text-align: center;
+* {
+    margin:0;
+    padding: 0;
+    box-sizing:border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    background-color:#f3f5f9;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.home-container {
+  max-height: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.col-names-container {
+  box-sizing: border-box;
+  padding: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: #cdcdc569;
+  font-family:'popins', 'bree-serif';
+}
+
+.col-contents-container {
+  padding: 0;
+  list-style: none;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: grey;
+}
+
+.ipo-list-container {
+  box-sizing: border-box;
+  max-height: 100%;
   display: flex;
   flex-direction: column;
+  overflow: auto;
+}
+
+.ipo-list-container::-webkit-scrollbar {
+  display: none;
+}
+
+.ipo-items-container {
+  list-style: none;
+  padding: 0;
+}
+
+.ipo-list {
+  box-sizing: border-box;
+  margin-bottom: 6px;
+  border-bottom: 1px solid lightgrey;
+  padding: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #F2F0EF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
 }
 
-.App-link {
-  color: #61dafb;
+.list-link {
+  text-decoration: none;
+  color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ipo-list h3 {
+  margin: 0;
+}
+
+.company-content-container {
+  display: flex;
+  align-items: center;
+  width: 200px;
+}
+
+.company-content-container p {
+  color: grey;
+}
+
+.company-content-container h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.company-content-container p {
+  margin: 0;
+  padding: 0;
+}
+
+.company-logo {
+  border-radius: 100%;
+  height: 40px;
+  width: 40px;
+}
+
+.company-name-container {
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+.issue-size {
+  width: 150px;
+  text-align: left;
+}
+
+.ipo-price-band {
+  width: 100px;
+  text-align: left;
+}
+
+.ipo-shares-container {
+  text-align: center;
+  margin-left: 20px;
+  width: 120px;
 }
