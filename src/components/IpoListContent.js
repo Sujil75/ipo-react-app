@@ -10,7 +10,7 @@ const IpoListContent = () => {
                 <Link key={item.id} to={`/ipos/${item.id}`} className='list-link' >
                     <li className='ipo-list'>
                         <div className='company-content-container'>
-                            <img src={item.logo} alt={item.company} className='company-logo' />
+                            <img src={item.logo} alt='company logo' className='company-logo' />
                             <div className='company-name-container'>
                                 <h3>{item.company}</h3>
                                 <p>{item.dates}</p>
