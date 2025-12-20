@@ -20,6 +20,12 @@ body{
   background-color: #cdcdc569;
 }
 
+@media screen and (max-width: 768px) {
+  .col-names-container {
+    display: none;
+  }
+}
+
 .col-contents-container {
   padding: 0;
   list-style: none;
@@ -49,6 +55,15 @@ body{
   padding: 0;
 }
 
+.list-link {
+  text-decoration: none;
+  color: black;
+}
+
+.list-link:hover {
+  text-decoration: none;
+}
+
 .ipo-list {
   box-sizing: border-box;
   margin-bottom: 6px;
@@ -64,13 +79,45 @@ body{
   font-size: 13px;
 }
 
-.list-link {
-  text-decoration: none;
-  color: black;
+.ipo-sm-list {
+  box-sizing: border-box;
+  margin-bottom: 6px;
+  border-bottom: 1px solid lightgrey;
+  padding: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+  display: none;
+  background-color: #F2F0EF;
 }
 
-.list-link:hover {
-  text-decoration: none;
+@media screen and (max-width: 768px) {
+  .ipo-list {
+    display: none;
+  }
+
+  .ipo-sm-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+  }
+}
+
+.ipo-data-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.ipo-data-container h5 {
+  font-weight: 500;
+}
+
+.sm-view-details {
+  float: right;
+  color: blue;
+  text-decoration: underline;
+  margin-top: 10px;
 }
 
 .ipo-list h3 {
@@ -140,6 +187,12 @@ body{
   cursor: pointer;
 }
 
+@media screen and (max-width: 768px) {
+  .pages-container {
+    display: none;
+  }
+}
+
 .home-link {
   color: grey;
   text-decoration: none;
@@ -153,6 +206,12 @@ body{
   padding: 25px;
   font-family: Arial, Helvetica, sans-serif;
   scrollbar-width: none;
+}
+
+@media screen and (max-width: 768px) {
+  .details-view-content-container {
+    padding: 10px;
+  }
 }
 
 .details-view-content-container::-webkit-scrollbar {
@@ -184,6 +243,12 @@ body{
   margin-right: 20px;
 }
 
+/* @media  screen and (max-width: 768px) {
+  .details-view-arrow-button {
+    display: none;
+  }
+} */
+
 .details-view-arrow-button:hover {
   cursor: pointer;
   outline: none;
@@ -207,6 +272,12 @@ body{
 .details-view-header-btn-container div {
   height: fit-content;
   cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .details-view-header-btn-container {
+    display: none;
+  }
 }
 
 .details-view-header-btn-container button {
@@ -255,6 +326,19 @@ body{
   border-radius: 20px;
 }
 
+@media screen and (max-width: 768px) {
+  .ipo-details-container {
+    height: fit-content;
+    border: 0;
+    padding: 0;
+  }
+  
+  .ipo-details-container ul {
+    grid-template-columns: repeat(2, 100px);
+    column-gap: 20px;
+  }
+}
+
 .ipo-details-container li {
   text-align: left;
 }
@@ -268,6 +352,12 @@ body{
   font-size: 17px;
 }
 
+@media screen and (max-width: 768px) {
+  .ipo-details-container li > h4 {
+    font-size: 13px;
+  }
+}
+
 .ipo-timeline-container {
   width: 100%;
   height: 200px;
@@ -276,6 +366,18 @@ body{
   margin-top: 30px;
   padding: 25px;
   padding-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .ipo-timeline-container {
+    height: fit-content;
+    padding: 0;
+    border: 0;
+  }
+
+  .ipo-timeline-container h4 {
+    margin-bottom: 10px;
+  }
 }
 
 .timeline-container {
@@ -299,6 +401,26 @@ body{
   padding: 0;
 }
 
+.lg-timeline-view {
+  display: block;
+}
+
+.sm-timeline-view {
+  display: none;
+}
+
+@media screen and (max-width: 768px)  {
+  .lg-timeline-view {
+    display: none;
+  }
+
+  .sm-timeline-view {
+    display: block;
+    height: fit-content;
+    scrollbar-width: none;
+  }
+}
+
 .about-company {
   width: 100%;
   border: 1px solid lightgray;
@@ -310,4 +432,32 @@ body{
 
 .about-company h4 {
   margin-bottom: 10px;
+}
+
+.company-desc {
+  display: block;
+}
+
+.about-company div {
+  display: none;
+}
+
+.read-more {
+  color: #FFAE42;
+  text-decoration: underline;
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .company-desc {
+    display: none;
+  }
+
+  .about-company div {
+    display: block;
+  }
+
+  .read-more {
+    display: block;
+  }
 }

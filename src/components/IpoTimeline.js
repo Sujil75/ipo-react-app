@@ -18,7 +18,7 @@ const IpoTimeline = props => {
         <div className='ipo-timeline-container'>
             <h4>IPO Timeline</h4>
             
-            <ul style={{ width: "100%", height: "350px" }}>
+            <ul className='lg-timeline-view' style={{ width: "100%", height: "350px" }}>
                 <Chrono
                     mode="HORIZONTAL"
                     items={items}
@@ -32,6 +32,26 @@ const IpoTimeline = props => {
                         secondary: "#e0e0e0", 
                         titleColor: "black",  
                         cardTitleColor: "green" 
+                    }}
+                />
+            </ul>
+
+            <ul className='sm-timeline-view'>
+                <Chrono
+                    mode="VERTICAL"
+                    items={items}
+                    cardLess={false} 
+                    cardHeight={20}   
+                    cardWidth={50}       
+                    hideControls={true}       
+                    disableToolbar={true}     
+                    lineWidth={1}             
+                    timelinePointDimension={20} 
+                    theme={{
+                        primary: "green",     
+                        secondary: "lightgrey", 
+                        titleColor: "black",  
+                        cardTitleColor: "green",
                     }}
                 />
             </ul>
